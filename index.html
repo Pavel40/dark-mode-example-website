@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pavel40">
+    <meta name="description" content="Example dark mode enabled website.">
+
+    <title>Dark mode website</title>
+
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body class="container dark:bg-offblack transition-colors duration-75">
+    <header class="pb-4 pt-8">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex">
+                <img src="avatar.png" alt="avatar" class="h-12 pl-2 pr-4">
+                <h1 class="text-5xl text-blue-700 dark:text-blue-400 font-medium leading-snug">Example dark mode website
+                </h1>
+            </div>
+            <nav class="py-4">
+                <ul class="flex">
+                    <li class="px-4 text-lg dark:text-white"><a href="#about" class="hover:text-blue-400">About</a></li>
+                    <li class="px-4 text-lg dark:text-white"><a href="#gallery" class="hover:text-blue-400">Gallery</a>
+                    </li>
+                    <li class="px-4 dark:text-white"><button class="text-lg hover:text-blue-400" id="darkmode">Dark
+                            mode</button></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="text-lg text-gray-600 dark:text-gray-200 pl-3 py-1 italic">Really simple website with only one purpose
+            - dark mode
+            showcase
+        </p>
+    </header>
+    <section id="about" class="mx-2 lg:mx-0 rounded-xl my-8 p-6 bg-gray-900 flex flex-col lg:flex-row">
+        <div class="lg:w-3/4 pr-8 flex flex-col justify-center">
+            <h2 class="text-4xl text-white font-medium">About</h2>
+            <hr class="pb-2">
+            <p class="text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Offendit eleifend
+                moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius vituperata
+                ei nec. Partiendo adversarium no mea. Pri posse graeco definitiones cu, id eam populo quaestio
+                adipiscing, usu quod malorum te. Scripta periculis ei eam, te pro movet reformidans. Te cum aeque
+                repudiandae delicatissimi, cu populo dictas ponderum vel, dolor consequat ut vix. No dicam aperiam vis.
+                Unum facilisi duo et. Scripta periculis ei eam, te pro movet reformidans. Pri posse graeco definitiones
+                cu, id eam populo quaestio adipiscing, usu quod malorum te. No dicam aperiam vis. Scripta periculis ei
+                eam, te pro movet reformidans. Vivendum intellegat et qui, ei denique consequuntur vix. Scripta
+                periculis ei eam, te pro movet reformidans. Id mundi quando mandamus sit, est vide option accusata et.
+                Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri
+                persius vituperata ei nec.
+            </p>
+        </div>
+        <div class="lg:w-1/4 pt-4 lg:pt-0">
+            <img src="mountain.jpg" alt="mountain image" class="rounded">
+            <p class="text-white pt-1 text-center">Photo by <a
+                    href="https://unsplash.com/@daesign?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+                    class="underline">Sead
+                    Dedić</a> on <a class="underline"
+                    href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+            </p>
+        </div>
+    </section>
+    <section id="gallery">
+        <h2 class="px-2 md:px-0 text-5xl py-4 font-medium dark:text-white">Gallery</h2>
+        <div class="px-2 md:px-0 grid md:grid-cols-3 gap-4">
+            <img src="gallery/lion.jpg" alt="Photo by Andrew Liu on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+            <img src="gallery/laptop.jpg" alt="Photo by XPS on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+            <img src="gallery/train.jpg" alt="Photo by Harry Gillen on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+            <img src="gallery/flowers.jpg" alt="Photo by 冬城 on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+            <img src="gallery/waterfall.jpg" alt="Photo by Kalen Emsley on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+            <img src="gallery/road.jpg" alt="Photo by Intricate Explorer on Unsplash"
+                class="gallery-img rounded hover:opacity-70 transition duration-100 cursor-pointer">
+        </div>
+    </section>
+    <footer class="text-center py-4 dark:text-white">
+        <p>Copyright &copy; 2021 <a href="https://pavel40.github.io" class="underline text-lg">Pavel40</a></p>
+    </footer>
+
+    <div class="hidden z-10 fixed left-0 top-0 w-full h-full overflow-auto bg-modal flex justify-center items-center"
+        id="modal">
+        <div class="max-w-screen-sm">
+            <span class="text-white cursor-pointer text-5xl absolute top-5 right-5" id="close">&times;</span>
+            <img src="gallery/lion.jpg" alt="" id="modal-img" style="max-height: 88vh;">
+            <p id="modal-caption" class="text-white text-xl font-medium text-center"></p>
+        </div>
+    </div>
+</body>
+
+</html>
